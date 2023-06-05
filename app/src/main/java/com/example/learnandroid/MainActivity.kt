@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,8 +16,14 @@ class MainActivity : AppCompatActivity() {
         val butt = findViewById<Button>(R.id.button)
 
         butt.setOnClickListener{
-            val msg = "Welcome ${inp.text.toString()}";
-            textVi.text = msg;
+            if(inp.text.toString() == ""){
+                textVi.text = ""
+                Toast.makeText(this@MainActivity,"Please enter your name",Toast.LENGTH_SHORT).show()
+            }else {
+                val msg = "Welcome ${inp.text.toString()}";
+                textVi.text = msg;
+                inp.text.clear();
+            }
         }
 
     }
