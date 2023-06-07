@@ -3,5 +3,10 @@
     <style name="Base.Theme.LearnAndroid" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/dark_cyan</item>
+        <item name="colorPrimaryDark">@color/cadet_blue</item>
+        <item name="colorAccent">@color/alice_blue</item>
+
+        <item name="android:statusBarColor" >?attr/colorPrimaryDark</item>
     </style>
 </resources>
