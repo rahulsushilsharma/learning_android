@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var inp: EditText
     private lateinit var butt: Button
     private lateinit var butt1: Button
+    private lateinit var butt2: Button
     private lateinit var userName: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         inp = findViewById<EditText>(R.id.editTextText)
         butt = findViewById<Button>(R.id.button)
         butt1 = findViewById<Button>(R.id.button2)
+        butt2 = findViewById(R.id.mediaButton1)
         userName = ""
         sp = getSharedPreferences("my_sf", MODE_PRIVATE)
         editor = sp.edit()
@@ -50,6 +52,14 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("USER", userName)
             startActivity(intent)
         }
+
+        butt2.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+//            intent.putExtra("USER", userName)
+            startActivity(intent)
+        }
+
+
 
     }
 
